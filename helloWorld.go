@@ -2,6 +2,13 @@ package main
 
 import "fmt"
 
+func testFun(year string) (string string) {
+
+	var res string = year + "-03-04"
+	var msg2 string = "hello "
+	return res, msg2
+}
+
 func main() {
 
 	var stockcode = 123
@@ -21,12 +28,7 @@ func main() {
 
 	//全局变量是允许声明但不使用的,其他变量声明后必须使用
 
-	testFun("2020")
+	res, msg2 = testFun("2020")
+	fmt.Println(res, msg2)
 
-}
-
-func testFun(year string) (int string) {
-	fmt.Println(year + "-03-04")
-	var res string = year + "-03-04"
-	return 0 res
 }
